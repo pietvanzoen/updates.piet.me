@@ -11,8 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "fmt": "prettier --no-color --write '**/*.{md,js,json}'",
-    "postinstall": "cp -n .env.example .env"
+    "fmt": "prettier --no-color --write '**/*.{md,js,json}'"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
