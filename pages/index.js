@@ -15,11 +15,17 @@ class Page extends React.Component {
   }
 
   render() {
-    const { updates = {} } = this.props;
+    const { updates = {}, error } = this.props;
+    if (error) {
+      return <h3>There was an error</h3>;
+    }
     return (
       <ul>
         {updates.map(update => (
-          <li dangerouslySetInnerHTML={{ __html: update.content.html }} />
+          <li>
+            <div dangerouslySetInnerHTML={{ __html: update.content.html }} />
+            <time>{update.data.date}</time>
+          </li>
         ))}
       </ul>
     );
