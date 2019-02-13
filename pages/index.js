@@ -20,7 +20,7 @@ class Page extends React.Component {
     return (
       <ul>
         {updates.map(update => (
-          <li>
+          <li key={update.path}>
             <div dangerouslySetInnerHTML={{ __html: update.content.html }} />
             <time>{update.data.date}</time>
           </li>
