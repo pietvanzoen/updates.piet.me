@@ -3,11 +3,15 @@ import fetch from 'isomorphic-unfetch';
 
 class Page extends React.Component {
   static async getInitialProps() {
-    const res = await fetch(
-      'https://raw.githubusercontent.com/pietvanzoen/updates/master/updates.json',
-    );
-    const updates = await res.json();
-    return updates;
+    try {
+      const res = await fetch(
+        'https://raw.githubusercontent.com/pietvanzoen/updates/master/updates.json',
+      );
+      const updates = await res.json();
+      return updates;
+    } catch (e) {
+      return { error: true, message: 'failed to fetch updates' };
+    }
   }
 
   render() {
