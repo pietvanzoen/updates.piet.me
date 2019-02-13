@@ -8,6 +8,7 @@ class Page extends React.Component {
       const updates = await res.json();
       return updates;
     } catch (e) {
+      console.error(e);
       return { error: true, message: 'failed to fetch updates' };
     }
   }
