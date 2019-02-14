@@ -15,3 +15,8 @@ hr {
   padding: 0;
   clear: both;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
