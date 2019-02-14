@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import fetch from 'isomorphic-unfetch';
+import UpdateList from '../components/UpdateList';
+import './modern-normalize.min.css';
+import './main.css';
 
 class Page extends React.Component {
   static async getInitialProps() {
@@ -15,18 +18,25 @@ class Page extends React.Component {
 
   render() {
     const { updates = {}, error } = this.props;
-    if (error) {
-      return <h3>There was an error</h3>;
-    }
     return (
-      <ul>
-        {updates.map(update => (
-          <li key={update.path}>
-            <div dangerouslySetInnerHTML={{ __html: update.content.html }} />
-            <time>{update.data.date}</time>
-          </li>
-        ))}
-      </ul>
+      <Fragment>
+        <header>
+          <h1>Updates</h1>
+          <hr />
+        </header>
+        {error && <h3>There was an error</h3>}
+        {!error && <UpdateList updates={updates} />}
+        <footer>
+          <p>
+            <small>
+              &copy;&nbsp;
+              {new Date().getFullYear()}
+              {' '}
+              <a href="https://piet.me">Piet van Zoen</a>
+            </small>
+          </p>
+        </footer>
+      </Fragment>
     );
   }
 }
