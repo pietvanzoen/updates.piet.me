@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 import UpdateList from '../components/UpdateList';
 import './modern-normalize.min.css';
 import './main.css';
@@ -20,6 +21,13 @@ class Page extends React.Component {
     const { updates = {}, error } = this.props;
     return (
       <Fragment>
+        <Head>
+          <title>Updates - Piet van Zoen</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <header>
           <h1>Updates</h1>
           <hr />
