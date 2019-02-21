@@ -6,10 +6,7 @@ function UpdateList({ updates }) {
   return (
     <div>
       {updates.map(update => (
-        <section key={update.path}>
-          <UpdateItem update={update} />
-          <hr />
-        </section>
+        <UpdateItem key={update.path} update={update} />
       ))}
     </div>
   );
