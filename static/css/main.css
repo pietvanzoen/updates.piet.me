@@ -53,6 +53,10 @@ hr {
   transition: all ease-in-out 0.2s;
 }
 
+.update-list {
+  margin-top: -1em;
+}
+
 .update:hover {
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   transform: translateY(-0.1em);
@@ -88,4 +92,22 @@ hr {
 }
 .update-footer {
   border-radius: 0 0 5px 5px;
+}
+
+.fade-in-enter {
+  opacity: 0.01;
+}
+
+.fade-in-enter.fade-in-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-in-leave {
+  opacity: 1;
+}
+
+.fade-in-leave.fade-in-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in-out;
 }
