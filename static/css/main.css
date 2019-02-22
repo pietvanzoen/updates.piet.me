@@ -37,6 +37,21 @@ hr {
   clear: both;
 }
 
+.page-header-profile {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.page-header-profile img {
+  width: 2.5em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+a.page-header-profile {
+  text-decoration: none;
+}
+
 .text-right {
   text-align: right;
 }

@@ -43,9 +43,16 @@ class Page extends React.Component {
             }}
           />
         </Head>
-        <header>
-          <h1 className="title">
-            <a href="/">Updates</a>
+        <header className="page-header">
+          <h1>
+            <a href="https://updates.piet.me" className="page-header-profile">
+              <img
+                alt="Piet van Zoen"
+                className="page-header-img pure-img"
+                src="/static/images/me-usabilla.jpg"
+              />
+              <span>Piet van Zoen - Updates</span>
+            </a>
           </h1>
         </header>
         {error && <h3>There was an error</h3>}
