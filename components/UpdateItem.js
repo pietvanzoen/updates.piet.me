@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const GITHUB_URL = 'https://github.com/pietvanzoen/updates/blob/master/';
 
 function UpdateItem({ update }) {
-  const { data, content, path } = update;
+  const { data, html, path } = update;
   return (
     <Fragment>
       <a name={path} />
@@ -23,7 +23,7 @@ function UpdateItem({ update }) {
         </header>
         <section
           className="update-body"
-          dangerouslySetInnerHTML={{ __html: enhanceContent(content.html) }}
+          dangerouslySetInnerHTML={{ __html: enhanceContent(html) }}
         />
         <footer className="pure-g update-footer">
           <div className="pure-u-1-2">
