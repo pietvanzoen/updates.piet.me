@@ -40,6 +40,9 @@ hr {
 .text-right {
   text-align: right;
 }
+.text-small {
+  font-size: 0.8em;
+}
 
 .update {
   background-color: #fff;
