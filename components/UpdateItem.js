@@ -45,13 +45,10 @@ function UpdateItem({ update }) {
               {`${distanceInWordsStrict(data.date, new Date())} ago`}
             </time>
           </div>
-          <div className="pure-u-1 pure-u-sm-1-2 text-right">
-            &nbsp;
+          <div className="pure-u-1 pure-u-sm-1-2 update-footer-links text-right">
             {data.twitter && <a href={data.twitter}>Twitter</a>}
-            &nbsp;
             {data.mastodon && <a href={data.mastodon}>Mastodon</a>}
-            &nbsp;
-            {<a href={`${GITHUB_URL}${path}`}>Github</a>}
+            {<a href={`${GITHUB_URL}${path}`}>Source</a>}
           </div>
         </footer>
       </article>
