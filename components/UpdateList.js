@@ -7,7 +7,7 @@ import UpdateListControls from './UpdateListControls';
 function UpdateList({ updates }) {
   const [showReplies, setShowReplies] = useState(false);
   const items = filterUpdates(updates, { showReplies }).map(update => (
-    <div key={update.path}>
+    <div key={update.data.date}>
       <UpdateItem update={update} />
     </div>
   ));
