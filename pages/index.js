@@ -35,6 +35,10 @@ class Page extends React.Component {
             integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
             crossOrigin="anonymous"
           />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"
+          />
           <link rel="stylesheet" href="/static/css/main.css" />
           <script
             dangerouslySetInnerHTML={{

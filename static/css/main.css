@@ -9,12 +9,25 @@ textarea,
     Ubuntu, Cantarell, Fira Sans, 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .title a {
   text-decoration: none;
 }
 
 a {
   color: #619f98;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 body {
@@ -84,15 +97,15 @@ a.page-header-profile {
 .update--selected {
   border-color: #619f98;
 }
-.update-body img {
+.update-content img {
   border-radius: 5px;
   margin: 1em -0.5em -0.5em;
   max-width: calc(100% + 1em);
 }
-.update-body > *:last-child {
+.update-content > *:last-child {
   margin-bottom: 0;
 }
-.update-body > *:first-child {
+.update-content > *:first-child {
   margin-top: 0;
 }
 
@@ -126,4 +139,28 @@ a.page-header-profile {
 .fade-in-leave.fade-in-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in-out;
+}
+
+.link-box {
+  display: block;
+  border: 1px solid #eee;
+  font-size: 0.8em;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  transition: border 0.2s ease-in-out;
+  margin-top: 1.5em;
+}
+.link-box img {
+  border-radius: 5px;
+}
+.link-box:hover {
+  border-color: #619f98;
+}
+.link-box-title {
+  margin: 0;
+}
+.link-box-content,
+.link-box-img {
+  padding: 1em;
 }

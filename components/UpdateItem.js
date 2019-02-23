@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react';
 import { format, distanceInWordsStrict } from 'date-fns';
 import classNames from 'classnames';
+import LinkData from './LinkData';
 
 const GITHUB_URL = 'https://github.com/pietvanzoen/updates/blob/master/';
 
 function UpdateItem({ update }) {
-  const { data, html, path } = update;
+  const {
+    data, html, path, linkData = null,
+  } = update;
   return (
     <Fragment>
       <a name={path} />
@@ -21,10 +24,14 @@ function UpdateItem({ update }) {
             </span>
           )}
         </header>
-        <section
-          className="update-body"
-          dangerouslySetInnerHTML={{ __html: enhanceContent(html) }}
-        />
+        <section className="update-body">
+          <div
+            className="update-content"
+            dangerouslySetInnerHTML={{ __html: enhanceContent(html) }}
+          />
+          {linkData && <LinkData data={linkData} />}
+        </section>
+
         <footer className="pure-g update-footer">
           <div className="pure-u-1-2">
             <a href={`#${path}`}>
