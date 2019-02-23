@@ -100,7 +100,7 @@ hr {
 }
 .update-content img {
   border-radius: 5px;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-left: -0.5em;
   margin-bottom: -0.5em;
   max-width: calc(100% + 1em);
@@ -156,7 +156,7 @@ hr {
   color: #333;
   text-decoration: none;
   transition: border 0.2s ease-in-out;
-  margin: 1.5em;
+  margin-top: 1.5em;
   margin-left: -0.5em;
   margin-bottom: -0.5em;
   width: calc(100% + 1em);
@@ -206,6 +206,7 @@ hr {
   opacity: 0;
   transition: all 0.1s ease-in-out;
   transform: translateY(5px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .replies-button:hover span {
   opacity: 1;
