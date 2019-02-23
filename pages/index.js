@@ -42,7 +42,7 @@ class Page extends React.Component {
           <h1>
             <a href="https://updates.piet.me" className="page-header-profile">
               <img
-                alt="Piet van Zoen"
+                alt="Piet"
                 className="page-header-img pure-img"
                 src="/static/images/me-usabilla.jpg"
               />
