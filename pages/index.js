@@ -3,6 +3,10 @@ import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 import UpdateList from '../components/UpdateList';
 
+const { NODE_ENV } = process.env;
+
+const CSS_PATH = NODE_ENV === 'production' ? '/static/style.min.css' : '/static/style.css';
+
 class Page extends React.Component {
   static async getInitialProps() {
     try {
@@ -25,22 +29,9 @@ class Page extends React.Component {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <link
-            href="https://fonts.googleapis.com/css?family=Lato:400,400i,700"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-            integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"
-          />
-          <link rel="stylesheet" href="/static/css/main.css" />
+          <link rel="stylesheet" href={CSS_PATH} />
           <script
+            async
             dangerouslySetInnerHTML={{
               __html:
                 "(function(f, a, t, h, o, m){a[h]=a[h]||function(){(a[h].q=a[h].q||[]).push(arguments)};o=f.createElement('script'),m=f.getElementsByTagName('script')[0];o.async=1; o.src=t; o.id='fathom-script';m.parentNode.insertBefore(o,m)})(document, window, '//fathom.piet.me/tracker.js', 'fathom');fathom('set', 'siteId', 'EIPVY');fathom('trackPageview');",

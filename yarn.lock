@@ -4971,6 +4971,11 @@ typedarray@^0.0.6:
   resolved "https://npm.staging.nxdev.nl/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+uglifycss@^0.0.29:
+  version "0.0.29"
+  resolved "https://npm.staging.nxdev.nl/uglifycss/-/uglifycss-0.0.29.tgz#abe49531155d146e75dd2fdf933d371bc1180054"
+  integrity sha512-J2SQ2QLjiknNGbNdScaNZsXgmMGI0kYNrXaDlr4obnPW9ni1jljb1NeEVWAiTgZ8z+EBWP2ozfT9vpy03rjlMQ==
+
 unfetch@3.0.0:
   version "3.0.0"
   resolved "https://npm.staging.nxdev.nl/unfetch/-/unfetch-3.0.0.tgz#8d1e0513a4ecd0e5ff2d41a6ba77771aae8b6482"
