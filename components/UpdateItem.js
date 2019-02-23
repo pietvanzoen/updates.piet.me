@@ -33,7 +33,7 @@ function UpdateItem({ update }) {
         </section>
 
         <footer className="pure-g update-footer">
-          <div className="pure-u-1-2">
+          <div className="pure-u-1 pure-u-sm-1-2">
             <a href={`#${path}`}>
               <LinkIcon />
             </a>
@@ -45,7 +45,7 @@ function UpdateItem({ update }) {
               {`${distanceInWordsStrict(data.date, new Date())} ago`}
             </time>
           </div>
-          <div className="pure-u-1-2 text-right">
+          <div className="pure-u-1 pure-u-sm-1-2 text-right">
             &nbsp;
             {data.twitter && <a href={data.twitter}>Twitter</a>}
             &nbsp;
