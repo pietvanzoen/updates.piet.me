@@ -11,6 +11,8 @@ textarea,
 
 html {
   box-sizing: border-box;
+  background: #eee;
+  background: fixed linear-gradient(to bottom, #eee 80%, #a0c7c3 100%);
 }
 *,
 *:before,
