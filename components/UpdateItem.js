@@ -46,7 +46,15 @@ function UpdateItem({ update }) {
             </time>
           </div>
           <div className="pure-u-1 pure-u-sm-1-2 update-footer-links text-right">
-            {data.twitter && <a href={data.twitter}>Twitter</a>}
+            {data.twitter && (
+              <a
+                href={
+                  Array.isArray(data.twitter) ? data.twitter[0] : data.twitter
+                }
+              >
+                Twitter
+              </a>
+            )}
             {data.mastodon && <a href={data.mastodon}>Mastodon</a>}
             {<a href={`${GITHUB_URL}${path}`}>Source</a>}
           </div>
