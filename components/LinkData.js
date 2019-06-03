@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function LinkData({ data }) {
+  if (!data) return '';
   const {
     ogUrl, ogTitle, ogDescription, ogImage,
   } = data;

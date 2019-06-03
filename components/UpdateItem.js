@@ -29,7 +29,7 @@ function UpdateItem({ update }) {
             className="update-content"
             dangerouslySetInnerHTML={{ __html: enhanceContent(html) }}
           />
-          {linkData && <LinkData data={linkData} />}
+          {linkData && linkData.map(l => <LinkData data={l} />)}
         </section>
 
         <footer className="pure-g update-footer">
