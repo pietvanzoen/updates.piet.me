@@ -1,0 +1,5 @@
+{
+  "env": {
+    "UPDATES_API_URL": "https://pietvanzoen.github.io/updates/updates.json"
+  }
+}
